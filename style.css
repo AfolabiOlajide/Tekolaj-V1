@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
 }
 
+#logo {
+    font-family: 'Lobster', cursive;
+}
+
 /* 
     Nav bar style
 */
@@ -60,4 +64,43 @@ ul.topnav li a {
 ul.topnav li a:hover {
     color: rgb(102, 91, 91);
     background: rgba(255, 228, 196, 0.5);
+}
+
+ul.topnav li.dropdownicon {
+    display: none;
+}
+
+/* 
+    Mobile responsivenes
+*/
+
+@media screen and (max-width: 680px) {
+    ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    ul.topnav li.dropdownicon {
+        display: block;
+        float: right;
+    }
+
+    ul.topnav.responsive li.dropdownicon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li {
+        display: inline;
+        float: none;
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
 }
